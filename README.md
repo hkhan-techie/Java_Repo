@@ -1,2 +1,2 @@
 # Java_Repo
-Its a repo contains Java related implementations.
+Repo containing Java8 related example implementations.
