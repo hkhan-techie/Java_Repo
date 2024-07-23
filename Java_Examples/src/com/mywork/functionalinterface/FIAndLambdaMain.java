@@ -6,11 +6,11 @@ import java.util.function.*;
 
 public class FIAndLambdaMain {
     public static void main(String[] args) {
-//        ananymousClass();
-//        functionalInterfaceAndLambda();
-//        squareFI();
-//        testSquare();
-//        sortProducts();
+        ananymousClass();
+        functionalInterfaceAndLambda();
+        squareFI();
+        testSquare();
+        sortProducts();
         inBuiltFunctionalInterface();
 
     }
@@ -74,9 +74,9 @@ public class FIAndLambdaMain {
 
     private static void sortProducts() {
         List<Product> list=new ArrayList<Product>();
-        list.add(new Product(1,"Laptop",25000f));
-        list.add(new Product(3,"Adapter",300f));
-        list.add(new Product(2,"Cable",150f));
+        list.add(new Product(1,"Laptop",25000f, "Electronics"));
+        list.add(new Product(3,"Adapter",300f,"Accessories"));
+        list.add(new Product(2,"Cable",150f,"Cables"));
         System.out.println("Sorting on the basis of name...");
         // implementing lambda expression
         list.sort((p1, p2) -> {
