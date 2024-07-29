@@ -6,7 +6,7 @@ public class ExtendThread extends Thread {
         try {
 
             System.out.println(
-                    "Thread " + Thread.currentThread().threadId()
+                    "Thread " + Thread.currentThread().getId()
                             + " is running");
         } catch (Exception e) {
             // Throwing an exception

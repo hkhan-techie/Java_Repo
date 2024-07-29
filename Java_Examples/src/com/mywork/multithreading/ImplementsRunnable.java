@@ -5,7 +5,7 @@ public class ImplementsRunnable implements Runnable {
     public void run() {
         try {
             System.out.println(
-                    "Runnable Thread " + Thread.currentThread().threadId()
+                    "Runnable Thread " + Thread.currentThread().getId()
                             + " is running");
         } catch (Exception e) {
             // Throwing an exception
