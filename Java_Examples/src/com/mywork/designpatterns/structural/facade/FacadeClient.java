@@ -20,24 +20,11 @@ public class FacadeClient {
             ShopKeeper sk = new ShopKeeper();
 
             switch (choice) {
-                case 1: {
-                    sk.iphoneSale();
-                }
-                break;
-                case 2: {
-                    sk.samsungSale();
-                }
-                break;
-                case 3: {
-                    sk.onPlusSale();
-                }
-                break;
-                default: {
-                    System.out.println("Nothing You purchased");
-                    return;
-                }
+                case 1 -> sk.iphoneSale();
+                case 2 -> sk.samsungSale();
+                case 3 -> sk.onPlusSale();
+                default -> System.out.println("Nothing You purchased");
             }
-
         } while (true);
     }
 }

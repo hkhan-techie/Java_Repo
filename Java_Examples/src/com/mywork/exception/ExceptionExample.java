@@ -51,10 +51,10 @@ public class ExceptionExample {
             result = x / y;
             return result;
         } catch (ArithmeticException e) {
-            System.out.println(" finally Exception :" + e.getMessage());
+            System.out.println(" Exception :" + e.getMessage());
+            result = 0;
         } finally {
             System.out.println("Executing finally block");
-            result = 0;
         }
         return result;
     }

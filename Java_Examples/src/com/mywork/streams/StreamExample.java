@@ -49,7 +49,7 @@ public class StreamExample {
 
         // reduce implementation
         List<Integer> number2 = Arrays.asList(2, 3, 4, 5);
-        int even = number2.stream().filter(x -> x % 2 == 0).reduce(0, (ans, i) -> ans + i);
+        int even = number2.stream().filter(x -> x % 2 == 0).reduce(0, Integer::sum);
         System.out.println("\nreduce:" + even);
 
         //partitioningBy

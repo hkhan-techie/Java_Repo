@@ -2,7 +2,7 @@ package com.mywork.problemsovling;
 
 public class LongestSubString {
     public static void main(String[] args) {
-        String input = "abcdefcedfefcm";
+        String input = "abcdefcedfefcmabcdefg";
         longestNonRepeatedSubString(input);
     }
 
