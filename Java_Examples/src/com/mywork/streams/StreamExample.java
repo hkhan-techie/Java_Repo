@@ -13,6 +13,9 @@ public class StreamExample {
         List<Integer> numbers = Arrays.asList(2, 3, 4, 5);
         List<Integer> square = numbers.stream().map(x -> x * x).collect(Collectors.toList());
         System.out.println(square);
+        System.out.println("min :" + numbers.stream().min(Integer::compareTo).get());
+        System.out.println("min :" + numbers.stream().max(Integer::compareTo).get());
+        System.out.println("sum :" + numbers.stream().reduce(Integer::sum).get());
 
         // Filter implementation
         System.out.println("\nfilter");
@@ -51,6 +54,10 @@ public class StreamExample {
         List<Integer> number2 = Arrays.asList(2, 3, 4, 5);
         int even = number2.stream().filter(x -> x % 2 == 0).reduce(0, Integer::sum);
         System.out.println("\nreduce:" + even);
+
+        // Get the sum of squares of even numbers from the list.
+        int sum = number2.stream().filter(x -> x % 2 == 0).map(x -> x * x).reduce(0, Integer::sum);
+        System.out.println("sum of squares of even numbers: " + sum);
 
         //partitioningBy
         System.out.println("\npartitioningBy");
