@@ -2,8 +2,8 @@ package com.mywork.designpatterns.creational.builder;
 
 public class FoodPackage {
 
-    private Food food;
-    private Drink drink; // optional
+    private final Food food;
+    private final Drink drink; // optional
 
     private FoodPackage(FoodPackageBuilder foodPackageBuilder) {
         this.food = foodPackageBuilder.food;

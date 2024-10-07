@@ -7,7 +7,7 @@ public class BuiltInQueue {
     public static void main(String args[]) {
 
         Queue<Integer> pQueue
-                = new PriorityQueue<Integer>();
+                = new PriorityQueue<>();
 
         pQueue.add(10);
         pQueue.add(20);

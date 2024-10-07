@@ -52,7 +52,7 @@ public class StreamExample {
 
         // reduce implementation
         List<Integer> number2 = Arrays.asList(2, 3, 4, 5);
-        int even = number2.stream().filter(x -> x % 2 == 0).reduce(0, Integer::sum);
+        Integer even = number2.stream().filter(x -> x % 2 == 0).reduce(Integer::sum).orElse(0);
         System.out.println("\nreduce:" + even);
 
         // Get the sum of squares of even numbers from the list.

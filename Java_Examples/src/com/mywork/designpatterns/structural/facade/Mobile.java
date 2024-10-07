@@ -1,7 +1,7 @@
 package com.mywork.designpatterns.structural.facade;
 
 public interface Mobile {
-    public void modelNo();
+    void modelNo();
 
-    public void price();
+    void price();
 }

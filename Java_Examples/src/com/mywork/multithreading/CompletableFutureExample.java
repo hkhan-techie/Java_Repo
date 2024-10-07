@@ -11,9 +11,7 @@ public class CompletableFutureExample {
     }
 
     private static void simple() {
-        CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> {
-            return "Hello, world!";
-        });
+        CompletableFuture<String> future = CompletableFuture.supplyAsync(() -> "Hello, world!");
 
         future.thenAccept(System.out::println);
     }

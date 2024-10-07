@@ -1,5 +1,5 @@
 package com.mywork.designpatterns.structural.bridge;
 
 public interface Color {
-    public void applyColor();
+    void applyColor();
 }

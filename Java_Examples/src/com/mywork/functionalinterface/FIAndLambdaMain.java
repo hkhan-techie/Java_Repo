@@ -1,6 +1,7 @@
 package com.mywork.functionalinterface;
 
 import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.List;
 import java.util.function.*;
 
@@ -45,8 +46,8 @@ public class FIAndLambdaMain {
 
     private static void ananymousClass() {
         new Thread(new Runnable() {
-            @Override public void run()
-            {
+            @Override
+            public void run() {
                 System.out.println("New thread created using ananymousClass");
             }
         }).start();
@@ -69,21 +70,19 @@ public class FIAndLambdaMain {
     private static void testSquare() {
         TestSquare testSquare = new TestSquare();
         int result = testSquare.calculate(20);
-        System.out.println("Result: "+result);
+        System.out.println("Result: " + result);
     }
 
     private static void sortProducts() {
-        List<Product> list=new ArrayList<Product>();
-        list.add(new Product(1,"Laptop",25000f, "Electronics"));
-        list.add(new Product(3,"Adapter",300f,"Accessories"));
-        list.add(new Product(2,"Cable",150f,"Cables"));
+        List<Product> list = new ArrayList<Product>();
+        list.add(new Product(1, "Laptop", 25000f, "Electronics"));
+        list.add(new Product(3, "Adapter", 300f, "Accessories"));
+        list.add(new Product(2, "Cable", 150f, "Cables"));
         System.out.println("Sorting on the basis of name...");
         // implementing lambda expression
-        list.sort((p1, p2) -> {
-            return p1.name.compareTo(p2.name);
-        });
-        for(Product p:list){
-            System.out.println(p.id+" "+p.name+" "+p.price);
+        list.sort(Comparator.comparing(p -> p.name));
+        for (Product p : list) {
+            System.out.println(p.id + " " + p.name + " " + p.price);
         }
 
     }

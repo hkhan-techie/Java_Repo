@@ -7,7 +7,7 @@ public class ValidParenthesis {
     public static void main(String[] args) {
 
 //        String s = "()[]{}";
-        String s = "([)}";
+        String s = "([{}]){}[]()";
         System.out.println(validParenthesis(s));
     }
 

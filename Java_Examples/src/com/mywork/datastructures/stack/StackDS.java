@@ -6,7 +6,7 @@ public class StackDS {
     ArrayList<Integer> list = new ArrayList<>();
 
     public boolean isEmpty() {
-        return (list.isEmpty());
+        return list.isEmpty();
     }
 
     public void push(int data) {
