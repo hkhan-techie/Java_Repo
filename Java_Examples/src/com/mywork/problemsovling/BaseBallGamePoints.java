@@ -11,7 +11,11 @@ public class BaseBallGamePoints {
 
     private static int calculatePoints(String[] ops) {
         if (ops.length == 1) {
-            return Integer.parseInt(ops[0]);
+            try {
+                return Integer.parseInt(ops[0]);
+            } catch (NumberFormatException numberFormatException) {
+                return -1;
+            }
         }
         List<Integer> list = new ArrayList<>();
 

@@ -26,34 +26,36 @@ public class LetterCasePermutation {
         while (leftIndex < rightIndex) {
             char[] leftChars = input.toCharArray();
             Character lc = leftChars[leftIndex];
-            if (lc.compareTo(Character.toUpperCase(lc)) != 0) {
-                leftChars[leftIndex] = Character.toUpperCase(lc);
-                String str = String.valueOf(leftChars);
-                if (!arrayList.contains(str))
-                    arrayList.add(str);
-            } else {
-                leftChars[leftIndex] = Character.toLowerCase(lc);
-                String str = String.valueOf(leftChars);
-                if (!arrayList.contains(str))
-                    arrayList.add(str);
-            }
+            if (Character.isLetter(lc))
+                if (lc.compareTo(Character.toUpperCase(lc)) != 0) {
+                    leftChars[leftIndex] = Character.toUpperCase(lc);
+                    String str = String.valueOf(leftChars);
+                    if (!arrayList.contains(str))
+                        arrayList.add(str);
+                } else {
+                    leftChars[leftIndex] = Character.toLowerCase(lc);
+                    String str = String.valueOf(leftChars);
+                    if (!arrayList.contains(str))
+                        arrayList.add(str);
+                }
 
             leftIndex += 1;
 
 
             char[] rightChars = input.toCharArray();
             Character lcr = rightChars[rightIndex];
-            if (lcr.compareTo(Character.toUpperCase(lcr)) != 0) {
-                rightChars[rightIndex] = Character.toUpperCase(lcr);
-                String str = String.valueOf(rightChars);
-                if (!arrayList.contains(str))
-                    arrayList.add(str);
-            } else {
-                rightChars[rightIndex] = Character.toLowerCase(lcr);
-                String str = String.valueOf(rightChars);
-                if (!arrayList.contains(str))
-                    arrayList.add(str);
-            }
+            if (Character.isLetter(lcr))
+                if (lcr.compareTo(Character.toUpperCase(lcr)) != 0) {
+                    rightChars[rightIndex] = Character.toUpperCase(lcr);
+                    String str = String.valueOf(rightChars);
+                    if (!arrayList.contains(str))
+                        arrayList.add(str);
+                } else {
+                    rightChars[rightIndex] = Character.toLowerCase(lcr);
+                    String str = String.valueOf(rightChars);
+                    if (!arrayList.contains(str))
+                        arrayList.add(str);
+                }
 
             rightIndex -= 1;
         }

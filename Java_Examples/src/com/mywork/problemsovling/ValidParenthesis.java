@@ -32,29 +32,21 @@ public class ValidParenthesis {
     }
 
     private static char getOpenParen(char ch) {
-        switch (ch) {
-            case '(':
-                return '(';
-            case '{':
-                return '{';
-            case '[':
-                return '[';
-            default:
-                return 0;
-        }
+        return switch (ch) {
+            case '(' -> '(';
+            case '{' -> '{';
+            case '[' -> '[';
+            default -> 0;
+        };
     }
 
     private static char getCloseParen(char ch) {
-        switch (ch) {
-            case ')':
-                return ')';
-            case '}':
-                return '}';
-            case ']':
-                return ']';
-            default:
-                return 0;
-        }
+        return switch (ch) {
+            case ')' -> ')';
+            case '}' -> '}';
+            case ']' -> ']';
+            default -> 0;
+        };
     }
 
 }

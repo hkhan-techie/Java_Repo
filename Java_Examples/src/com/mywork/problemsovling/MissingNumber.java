@@ -26,5 +26,20 @@ public class MissingNumber {
             }
         }
         System.out.println(missingInteger);
+
+        System.out.println(missingNumber(new int[]{3, 0, 1, 2}));
     }
+
+    //Method that returns the missing value
+    public static int missingNumber(int[] nums) {
+        int sumArray = 0;
+        int n = nums.length;
+        // Finding the sum of the array
+        for (int i = 0; i < n; i++)
+            sumArray += nums[i];
+        // Calculating actual sum.
+        int ActualSum = (n * n + n) / 2;
+        return ActualSum - sumArray;
+    }
+
 }

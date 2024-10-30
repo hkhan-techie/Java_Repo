@@ -22,7 +22,6 @@ public class FindHighestRepeatableChar {
                         highestCount = count;
                         highestRepeatedChar = ch;
                     }
-
                 } else {
                     map.put(ch, 1);
                     highestCount = 1;

@@ -20,6 +20,7 @@ class BinarySearchTree {
     // Insert a new node into the BST
     public void insert(int data) {
         root = insertRec(root, data);
+//        insertRec(root, data);
     }
 
     private Node insertRec(Node root, int data) {

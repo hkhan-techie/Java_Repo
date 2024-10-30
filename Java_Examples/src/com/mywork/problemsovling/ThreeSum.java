@@ -14,6 +14,9 @@ public class ThreeSum {
         List<String> stringList = new ArrayList<>();
         int index = 0;
         HashSet<Integer> set = new HashSet<>();
+        if (nums.size() < 3) {
+            return;
+        }
         while (index < nums.size() - 1) {
             int first = nums.get(index);
             int next = nums.get(index + 1);

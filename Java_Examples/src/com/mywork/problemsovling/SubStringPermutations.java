@@ -17,16 +17,16 @@ public class SubStringPermutations {
 
         while (leftIndex < s1.length() && rightIndex > -1) {
             leftBuffer.append(array[leftIndex]);
-            System.out.println("leftBuffer :" + leftBuffer.toString());
-            if (leftBuffer.toString().length() > 1 && s2.contains(leftBuffer.toString())) {
+            System.out.println("leftBuffer :" + leftBuffer);
+            if (leftBuffer.length() > 1 && s2.contains(leftBuffer)) {
                 System.out.println("leftBuffer true");
                 return true;
             }
             leftIndex += 1;
 
             rightBuffer.append(array[rightIndex]);
-            System.out.println("rightBuffer :" + rightBuffer.toString());
-            if (rightBuffer.toString().length() > 1 && s2.contains(rightBuffer.toString())) {
+            System.out.println("rightBuffer :" + rightBuffer);
+            if (rightBuffer.length() > 1 && s2.contains(rightBuffer)) {
                 System.out.println("rightBuffer true");
                 return true;
             }
